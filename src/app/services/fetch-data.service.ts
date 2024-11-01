@@ -46,8 +46,8 @@ export class FetchDataService {
 
     uploadAudioFiles(base64data: string) {
         return this.octokit.request('PUT /repos/{owner}/{repo}/contents/{path}', {
-            owner: 'aky750305',
-            repo: 'assignment',
+            owner: 'Ssehgal29',
+            repo: 'HealthFacility',
             branch: 'audio_files',
             path: `patients_${Date.now()}`,
             message: 'upload file',
@@ -58,8 +58,8 @@ export class FetchDataService {
 
     getUploadFiles(audio_file_path: string) {
         return this.octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
-            owner: 'aky750305',
-            repo: 'assignment',
+            owner: 'Ssehgal29',
+            repo: 'HealthFacility',
             ref: 'audio_files',
             path: audio_file_path,
                   headers: {
