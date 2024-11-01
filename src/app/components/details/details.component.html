@@ -1,0 +1,72 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{'add_user' | translate}}</h4>
+  <button type="button" class="close" aria-label="Close" (click)="close()">
+    <span aria-hidden="true">x</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form class="add-popup-form" [formGroup]="form">
+    <div class="row">
+      <div class="col-lg-6 col-md-6">
+        <label for="text">{{'first_name' | translate}}</label>
+        <input type="text" id="first-name" placeholder="First Name" formControlName="first_name">
+        <div class="error-msg" *ngIf="form.controls['first_name'].invalid && (form.controls['first_name'].dirty ||
+        form.controls['first_name'].touched)">
+          <i class="material-icons">&#xe002;</i> Enter first name.
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <label for="text">{{'last_name' | translate}}</label>
+        <input type="text" id="last-name" placeholder="Last Name" formControlName="last_name">
+        <div class="error-msg" *ngIf="form.controls['last_name'].invalid && (form.controls['last_name'].dirty ||
+        form.controls['last_name'].touched)">
+          <i class="material-icons">&#xe002;</i> Enter last name.
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <label for="emails">{{'email' | translate}}</label><br />
+        <input type="email" id="email" placeholder="Email Address" formControlName="email">
+        <div class="error-msg" *ngIf="form.controls['email'].invalid && (form.controls['email'].dirty ||
+        form.controls['email'].touched)">
+          <i class="material-icons">&#xe002;</i> Enter valid email address.
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <label for="phone">{{'phone' | translate}}</label><br />
+        <input type="tel" id="phone" name="phone" placeholder="Phone number" formControlName="phone">
+        <div class="error-msg" *ngIf="form.controls['phone'].invalid && (form.controls['phone'].dirty ||
+        form.controls['phone'].touched)">
+          <i class="material-icons">&#xe002;</i>Enter 10 digit phone number.
+        </div>
+      </div>
+
+      <div id="my-app" *ngIf="storeData.type === 'caregiver'">
+        <div class="col-lg-12 mt-3">
+          <div>
+            <h6>{{'voice_message' | translate}}</h6>
+            <div class="uploaded-audio" *ngIf="!isAudioRecording && audioBlobUrl">
+              <audio controls muted>
+                <source [src]="audioBlobUrl" type="audio/ogg">
+              </audio>
+              <i class="material-icons" (click)="clearAudioRecordedData()">&#xe872;</i>
+              <!-- <i class="material-icons">&#xe2c4;</i> -->
+            </div>
+
+            <button class="start-button" *ngIf="!isAudioRecording && !audioBlobUrl"
+              (click)="startAudioRecording()">Start
+              Audio Recording</button>
+            <div id="audioTimer" *ngIf="isAudioRecording && !audioBlobUrl"> {{ audioRecordedTime }} </div>
+            <button class="stop-button" *ngIf="isAudioRecording && !audioBlobUrl" (click)="stopAudioRecording()">Stop
+              Audio Recording</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+</div>
+<div class="modal-footer">
+  <button type="button" class="close-btn" (click)="close()">{{'close' | translate}}</button>
+  <button mat-raised-button type="submit" class="submit-btn" (click)="submitData()">{{ ( inputData?.id ? 'save' :
+    'submit' ) | translate}}</button>
+</div>

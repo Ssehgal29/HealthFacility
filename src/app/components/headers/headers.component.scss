@@ -1,0 +1,34 @@
+.nav-bar {
+    padding: 1rem 3rem 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        height: 4rem;
+    }
+
+    button {
+        border: none;
+        background-color: transparent;
+        text-decoration: underline;
+         margin-left: 2rem;
+    }
+
+    select {
+        // position: absolute;
+        // left: 85%;
+        border: none;
+        text-decoration: underline; 
+
+        option {
+            font-size: small;
+        }
+    }
+
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+    margin-bottom: 4rem;
+}

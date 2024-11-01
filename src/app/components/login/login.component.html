@@ -1,0 +1,24 @@
+<app-headers></app-headers>
+<div class="login-page">
+  <!-- <h1></h1> -->
+  <form [formGroup]="form">
+    <div class="container">
+      <label for="uname"><b>{{'email' | translate }}</b></label>
+      <input type="text" placeholder="Enter email" name="uname" formControlName="email">
+      <!-- <div *ngIf="form.controls['email'].invalid && (form.controls['email'].dirty || form.controls['email'].touched)">
+        <mat-error>{{errorMessage('Email')}}</mat-error>
+      </div> -->
+
+      <label for="psw"><b>{{'password' | translate }}</b></label>
+      <input type="password" placeholder="Enter password" name="psw" formControlName="password">
+      <!-- <div
+        *ngIf="form.controls['password'].invalid && (form.controls['password'].dirty ||
+        form.controls['password'].touched)">
+        <mat-error>{{errorMessage('Password')}}</mat-error>
+      </div> -->
+      <button [disabled]="form.invalid" [ngClass]="form.valid ? 'abled' : 'disabled'" type="button"
+        (click)="login()">{{'sign_in' | translate }}</button>
+    </div>
+  </form>
+
+  <ngx-spinner type="ball-scale-multiple"></ngx-spinner>

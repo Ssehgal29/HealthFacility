@@ -1,0 +1,18 @@
+{
+    "welcome": "Bienvenue",
+    "name": "Nom",
+    "action": "Action",
+    "first_name": "Prénom",
+    "last_name": "Nom de famille",
+    "email": "Adresse email",
+    "phone": "Numéro de téléphone",
+    "voice_message": "Message vocal",
+    "close": "Fermer",
+    "save": "Sauvegarder",
+    "submit": "Soumettre",
+    "add_user": "Ajouter un utilisateur",
+    "sign_in": "Se connecter",
+    "password": "Mot de passe",
+    "logout": "Déconnexion"
+
+}

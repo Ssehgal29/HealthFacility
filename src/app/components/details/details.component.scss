@@ -1,0 +1,94 @@
+.modal {
+  padding: 2rem;
+  background-color: white;
+  height: auto;
+  max-width: min-content;
+}
+
+h4 {
+  font-family: system-ui;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin: 4px 0 4px 0;
+  display: flex;
+  align-items: center;
+
+  i {
+    margin-right: 6px;
+    font-size: 20px;
+  }
+}
+
+.close {
+  background: none;
+  border: none;
+}
+
+.add-popup-form label {
+  margin: 16px 10px 5px 0;
+  font-weight: 500;
+}
+
+.add-popup-form input {
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid darkgrey;
+  border-radius: 8px;
+}
+
+.add-popup-form button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  width: 52%;
+  border: 1px solid #ddd;
+  border-radius: 24px;
+  margin-top: 8px;
+  margin-bottom: 2rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  justify-self: flex-start;
+}
+
+.add-popup-form button:hover {
+  background-color: royalblue;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+
+  .close-btn {
+    background-color: dimgray;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    display: flex;
+    justify-self: center;
+    border: none;
+    justify-content: center;
+    border-radius: 5rem;
+    width: 24%;
+  }
+
+  .submit-btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    display: flex;
+    justify-self: center;
+    border: none;
+    justify-content: center;
+    border-radius: 5rem;
+    width: 24%;
+  }
+}

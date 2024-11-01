@@ -1,0 +1,5 @@
+<app-headers></app-headers>
+<div class="container">
+<h1> {{'welcome' | translate}} <span>{{storeData.first_name}} {{storeData.last_name}},</span></h1>
+<app-dashboard [storeData]="storeData"></app-dashboard>
+</div>

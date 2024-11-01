@@ -1,0 +1,54 @@
+button {
+    border-radius: 1.5rem;
+    padding: .75rem;
+    border-style: none;
+    background-color: #006080;
+    font-size: 14px;
+    color: white;
+    width: auto;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+    
+  #table-header thead {
+    background-color: cadetblue !important;
+    color: aliceblue !important;
+  }
+  }
+  
+
+  th, td {
+    text-align: left;
+    padding: 8px;
+
+    .material-icons {
+      color: mediumblue;
+      margin-right: 12px ;
+      cursor: pointer;
+        }
+
+        .material-icons:hover {
+          color: #000066;
+        }
+  }
+  
+  tr:nth-child(even) {
+    background-color: #e6f9ff;
+    color: black;
+  }
+
+  tr:nth-child(odd) {
+    background-color: white;
+    color: black;
+
+    .thead {
+      background-color: #ccf3ff;
+    }
+  }
+  
+  
